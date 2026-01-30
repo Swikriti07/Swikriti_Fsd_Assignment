@@ -28,7 +28,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         ':image'    => $imageName
     ]);
 
-    header("Location: index.php");
+    header("Location: admin.php");
     exit;
 }
 ?>

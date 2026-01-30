@@ -6,7 +6,7 @@ if (isset($_GET['id'])) {
 
     $stmt = $pdo->prepare("DELETE FROM products WHERE id = ?");
     $stmt->execute([$id]);
-    header("Location: index.php");
+    header("Location: admin.php");
     exit;
 } else {
     echo "Invalid request.";

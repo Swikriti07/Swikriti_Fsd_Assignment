@@ -64,7 +64,7 @@ $products = $stmt->fetchAll(PDO::FETCH_ASSOC);
             </div>
             <h3 class="product-name"><?= htmlspecialchars($product['name']) ?></h3>
             <p class="product-category"><strong>Category:</strong> <?= htmlspecialchars($product['category']) ?></p>
-            <p class="product-price"><strong>Price:</strong> ₹<?= number_format($product['price'], 2) ?></p>
+            <p class="product-price"><strong>Price:</strong> $<?= number_format($product['price'], 2) ?></p>
             <p class="product-stock"><strong>Stock:</strong> <?= htmlspecialchars($product['stock']) ?></p>
           </div>
         <?php endforeach; ?>

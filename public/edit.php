@@ -22,6 +22,7 @@ if (!$product) {
 
 // Handle form submission
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+
     $name = $_POST['edit_name'];
     $category = $_POST['edit_category'];
     $price = $_POST['edit_price'];
@@ -30,7 +31,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $stmt = $pdo->prepare("UPDATE products SET name = ?, category = ?, price = ?, stock = ? WHERE id = ?");
     $stmt->execute([$name, $category, $price, $stock, $id]);
 
-    header("Location: index.php");
+    header("Location: admin.php");
     exit;
 }
 ?>
@@ -52,6 +53,5 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
     <button type="submit" class="btn-update-product">Update Product</button>
 </form>
-
 
 <?php require '../includes/footer.php'; ?>

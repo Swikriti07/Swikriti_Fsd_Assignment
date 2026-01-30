@@ -1,4 +1,16 @@
-<?php if (session_status() === PHP_SESSION_NONE) session_start(); ?>
+<?php
+session_set_cookie_params([
+    'lifetime' => 0,       
+    'path'     => '/',          
+    'domain'   => '',   
+    'secure'   => true,        
+    'httponly' => true,        
+    'samesite' => 'Strict'        
+]);
+
+    session_start();
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -19,7 +31,7 @@
 
     <nav>
       <ul class="nav-links">
-        <li><a href="homepage.php">Home</a></li>
+        <li><a href="index.php">Home</a></li>
         <li><a href="product.php">Products</a></li>
         <li><a href="login.php" class="btn-secondary">Login</a></li>
         <li><a href="signup.php" class="btn-primary">Signup</a></li>
