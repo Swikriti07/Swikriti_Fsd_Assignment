@@ -1,176 +1,172 @@
-/* ===== DASHBOARD ===== */
 .dashboard {
-  margin-top: 40px;
-  padding: 40px;
-  background: #f4f7fe;
-}
-/* ===== LOG OUT BUTTON ===== */
-.btn-logout {
-  padding: 8px 16px;
-  background: #ef4444;   /* red color */
-  color: #fff;
-  border-radius: 6px;
-  text-decoration: none;
-  font-weight: 500;
-  transition: 0.2s;
-  display: inline-block;
-  margin-left: 1390px;
-  margin-bottom: 10px;
-}
-
-.btn-logout:hover {
-  background: #b91c1c;   /* darker red on hover */
-}
-
-/* ===== CARDS GRID ===== */
-.cards-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 20px;
-}
-
-.card {
-  background: #fff;
-  padding: 20px;
-  border-radius: 18px;
-  box-shadow: 0 10px 25px rgba(0,0,0,0.06);
-}
-
-.card h4 {
-  color: #6b7280;
-  font-size: 14px;
-}
-
-.card h2 {
-  margin-top: 10px;
-  font-size: 30px;
-}
-
-/* CARD COLORS */
-.card-blue   { border-left: 5px solid #3b82f6; }
-.card-purple { border-left: 5px solid #8b5cf6; }
-.card-green  { border-left: 5px solid #10b981; }
-.card-red    { border-left: 5px solid #ef4444; }
-.card-orange { border-left: 5px solid #f97316; }
-.card-indigo { border-left: 5px solid #6366f1; }
-.card-teal   { border-left: 5px solid #14b8a6; }
-.card-dark   { border-left: 5px solid #111827; }
-
-/* ===== DASHBOARD TOP ===== */
-.dashboard-top {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin: 20px 0;
-  gap: 10px;
-}
-
-#search {
-  flex: 1; 
-  max-width: 940px;
-  padding: 10px 15px;
-  font-size: 14px;
-  border: 1px solid #ccc;
-  border-radius: 8px;
-}
-
-.btn-add-product {
-  padding: 10px 18px;
-  background: #2563eb;
-  color: #fff;
-  border-radius: 8px;
-  text-decoration: none;
-  font-weight: 600;
-  transition: 0.3s;
-}
-
-.btn-add-product:hover {
-  background: #1e40af;
-}
-
-/* ===== DASHBOARD CONTENT GRID ===== */
-.dashboard-content {
-  margin-top: 10px;
-  display: grid;
-  grid-template-columns: 2fr 1fr; /* table:chart ratio */
-  gap: 20px;
-}
-
-
-/* ===== CHART CARD ===== */
-.chart-card {
-  background: #fff;
-  padding: 20px;
-  border-radius: 18px;
-  box-shadow: 0 10px 25px rgba(0,0,0,0.06);
+  margin-top: 100px;
 }
 
 /* ===== TABLE CARD ===== */
 .table-card {
-  background: #fff;
-  padding: 15px;
-  border-radius: 8px;
-  border: 1px solid #ddd;
-  max-height: 600px;      /* max height for table */
-  overflow-y: auto;       /* vertical scroll */
-  overflow-x: auto;       /* horizontal scroll for wide tables */
+  background: #ffffff;
+  padding: 20px;
+  border-radius: 14px;
+  border: 1px solid #e5e7eb;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+  display: flex;
+  justify-content: center;
+  overflow-x: auto;
 }
 
-/* ===== TABLE STYLES ===== */
+/* ===== TABLE ===== */
 table {
   width: 100%;
+  max-width: 1100px;
   border-collapse: collapse;
+  background: #ffffff;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+/* ===== TABLE HEADER ===== */
+thead {
+  background: #f9fafb;
 }
 
 thead th {
-  position: sticky;
-  top: 0;
-  background: #fff;
-  z-index: 2;
+  padding: 14px 16px;
+  font-size: 13px;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: #6b7280;
+  font-weight: 700;
+  border-bottom: 2px solid #e5e7eb;
 }
 
-th, td {
-  padding: 10px 8px;
-  text-align: left;
-  border-bottom: 1px solid #eee;
+/* ===== TABLE BODY ===== */
+tbody tr {
+  transition: background 0.2s ease;
+}
+
+tbody tr:hover {
+  background: #f3f4f6;
+}
+
+td {
+  padding: 14px 16px;
   font-size: 14px;
+  color: #374151;
+  border-bottom: 1px solid #e5e7eb;
+  vertical-align: middle;
 }
 
-th {
-  color: #6b7280; /* dark gray */
+/* ===== IMAGE COLUMN ===== */
+.table-card img {
+  width: 55px;
+  height: 55px;
+  object-fit: cover;
+  border-radius: 8px;
+  border: 1px solid #e5e7eb;
+}
+
+/* ===== PRICE ===== */
+td.price {
   font-weight: 600;
+  color: #111827;
 }
 
+/* ===== STOCK ===== */
 .low-stock {
-  color: #ef4444;
+  color: #dc2626;
+  font-weight: 700;
+}
+
+td.stock {
   font-weight: 600;
+}
+
+/* ===== ACTION BUTTONS ===== */
+.action-edit,
+.action-delete {
+  padding: 6px 10px;
+  font-size: 13px;
+  font-weight: 600;
+  border-radius: 6px;
+  text-decoration: none;
+  display: inline-block;
+  transition: all 0.2s ease;
 }
 
 .action-edit {
-  background: #10b981; /* green */
-  color: white;
-  padding: 5px 8px;
-  border-radius: 4px;
-  text-decoration: none;
-  margin-right: 8px;
-  transition: 0.3s;
+  background: #10b981;
+  color: #ffffff;
 }
 
 .action-edit:hover {
   background: #059669;
+  transform: translateY(-1px);
 }
 
 .action-delete {
-  background: #dc2626;
-  color: white;
-  padding: 5px 8px;
-  border-radius: 4px;
-  text-decoration: none;
-  transition: 0.3s;
+  background: #ef4444;
+  color: #ffffff;
 }
 
 .action-delete:hover {
   background: #b91c1c;
+  transform: translateY(-1px);
+}
+
+/* ===== ACTION COLUMN ALIGN ===== */
+td:last-child {
+  white-space: nowrap;
+}
+
+/* ===== SEARCH BAR ===== */
+#search {
+  width: 100%;
+  max-width: 1100px;
+  padding: 12px 16px;
+  font-size: 14px;
+  border-radius: 10px;
+  border: 1px solid #d1d5db;
+  outline: none;
+  transition: all 0.25s ease;
+  background: #ffffff;
+}
+
+#search::placeholder {
+  color: #9ca3af;
+}
+
+/* ===== ADD PRODUCT BUTTON ===== */
+.btn-add-product {
+  margin-bottom: 10px;
+  padding: 12px 20px;
+  color: #ffffff;
+  text-decoration: none;
+  
+}
+
+.btn-add-product:hover {
+  background: linear-gradient(135deg, #1e40af, #1e3a8a);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 14px rgba(37, 99, 235, 0.35);
+}
+
+/* ===== LOGOUT BUTTON ===== */
+.btn-logout {
+  text-decoration: none;
+  color: #ffffff ;
+ 
+}
+
+
+
+/* ===== DASHBOARD TOP ALIGNMENT ===== */
+.dashboard-top {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  margin: 20px 0 30px;
+  flex-wrap: wrap;
 }
 
 /* ===== ADD / EDIT PRODUCT FORM ===== */
@@ -189,7 +185,7 @@ th {
   background: #fff;
   padding: 25px 30px;
   border-radius: 12px;
-  box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
 }
 
 .form-label {
@@ -225,4 +221,18 @@ th {
 .btn-save-product:hover,
 .btn-update-product:hover {
   background: #1e40af;
+}
+
+/* ===== MOBILE RESPONSIVE ===== */
+@media (max-width: 768px) {
+  #search {
+    max-width: 100%;
+  }
+
+  .btn-add-product,
+  .btn-logout {
+    width: 100%;
+    text-align: center;
+    justify-content: center;
+  }
 }

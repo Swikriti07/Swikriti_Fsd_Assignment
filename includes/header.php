@@ -1,16 +1,15 @@
 <?php
+
 session_set_cookie_params([
-    'lifetime' => 0,       
-    'path'     => '/',          
-    'domain'   => '',   
-    'secure'   => true,        
-    'httponly' => true,        
-    'samesite' => 'Strict'        
+    'lifetime' => 0,
+    'path'     => '/',
+    'domain'   => '', 
+    'httponly' => true,
+    'samesite' => 'Strict'
 ]);
 
-    session_start();
+session_start();
 ?>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -33,8 +32,18 @@ session_set_cookie_params([
       <ul class="nav-links">
         <li><a href="index.php">Home</a></li>
         <li><a href="product.php">Products</a></li>
-        <li><a href="login.php" class="btn-secondary">Login</a></li>
-        <li><a href="signup.php" class="btn-primary">Signup</a></li>
+
+        <?php if (isset($_SESSION['user_id'])): ?>
+          <!-- Logged-in -->
+          <li>
+            <li><a href="add.php">Add Product</a></li>
+            <a href="logout.php" class="btn-logout">Logout</a>
+          </li>
+        <?php else: ?>
+          <!-- Guest -->
+          <li><a href="login.php" class="btn-secondary">Login</a></li>
+          <li><a href="signup.php" class="btn-primary">Signup</a></li>
+        <?php endif; ?>
       </ul>
     </nav>
   </div>
